@@ -45,7 +45,8 @@ a:hover{
 }
 
 
-nav{
+nav{    
+    width: 100%;
 
     display: flex;
     flex-direction: row;
@@ -116,6 +117,7 @@ nav{
 }
 
 .banner{
+    width: 100%;
     height: 500px;
     background-size: cover;
     background-image: url(img/creative\ art.png);
@@ -143,13 +145,17 @@ h2{
         width: 100%;
         margin: auto;
         padding: 1rem;
-  }
+  } 
   
   .box {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
     flex: 1 1 calc(33.333% - var(--gap));
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-
-
+    justify-content: center;
+    text-align: center;
     border-radius: 30px;
     background-color: aqua;
     padding: 40px;
@@ -157,17 +163,48 @@ h2{
     background-image: var(--confuso);
     background-size: cover;
     background-position: center;
-    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, opacity 0.3s ease;
     aspect-ratio: 16 / 9;
     max-width: 400px;
-    height: auto; /* ou remova height se estiver usando aspect-ratio */
+    height: auto; 
   }
+
+
+
+  .box::after {
+    border-radius: 30px;
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0); /* começa transparente */
+    transition: background-color 0.3s ease;
+    z-index: 1;
+  }
+
+  .box:hover::after {
+
+    background-color: rgba(0, 0, 0, 0.4); /* escurece ao passar o mouse */
+  }
+
   
   .box:hover {
     transform: scale(1.03);
+   
+  }
+
+  .box p{
+    z-index: 2;
+    color: white;
+    font-size: 40px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .box:hover p{
+    opacity: 1;
+
   }
   
-  /* Cada box com sua imagem */
+
   .box.a { --confuso: url('img/unnamed.jpg'); }
   .box.b { --confuso: url('img/images.jpg'); }
   .box.c { --confuso: url('img/images (1).jpg'); }
@@ -175,7 +212,7 @@ h2{
   .box.e { --confuso: url('img/linguagem-programacao-jogo.jpg'); }
   .box.f { --confuso: url('img/images (3).jpg'); }
   
-  /* Responsivo */
+
 @media (max-width: 1024px) {
     .box {
       flex: 1 1 calc(50% - var(--gap));
@@ -190,6 +227,7 @@ h2{
     }
   }
 .container3{
+    width: 100%;
     text-align: center;
     margin-top: 70px;
 
