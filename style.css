@@ -130,79 +130,65 @@ h2{
 }
 
 
-.container2{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 75px;
-    max-width: 1400px;
-    width: 100%;
-    margin: auto;
-    
-    
-}
+:root {
+    --gap: 2rem;
+  }
+  
+  .container2 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: var(--gap);
+        max-width: 1400px;
+        width: 100%;
+        margin: auto;
+        padding: 1rem;
+  }
+  
+  .box {
+    flex: 1 1 calc(33.333% - var(--gap));
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 
 
-
-
-
-
-
-
-
-
-.box{
     border-radius: 30px;
-    height: 230px;
-    width: calc(33.33% - 75px);
     background-color: aqua;
     padding: 40px;
     box-sizing: border-box;
-    
     background-image: var(--confuso);
-}
-
-footer{
-    margin-top: 70px;
-    color: white;
-    background-color: black;
-    height: 200px;
-    font-size: 15px;
-}
-
-
-.box.a{
-    --confuso:url(img/unnamed.jpg);
-    
-}
-.box.b{
     background-size: cover;
-
-    --confuso:url(img/images.jpg);
-}
-.box.c{ 
-    background-size: cover;       
-    --confuso:url(img/images\ \(1\).jpg);
-
-
-}
-.box.d{
-    background-size: cover;
-    --confuso:url(img/images\ \(2\).jpg);
-
-}
-.box.e{
-    background-size: cover;
-    --confuso:url(img/linguagem-programacao-jogo.jpg);
-
-}
-.box.f{
-    background-size: cover;
-    --confuso:url(img/images\ \(3\).jpg);
-
-}
-
-
+    background-position: center;
+    transition: transform 0.2s ease;
+    aspect-ratio: 16 / 9;
+    max-width: 400px;
+    height: auto; /* ou remova height se estiver usando aspect-ratio */
+  }
+  
+  .box:hover {
+    transform: scale(1.03);
+  }
+  
+  /* Cada box com sua imagem */
+  .box.a { --confuso: url('img/unnamed.jpg'); }
+  .box.b { --confuso: url('img/images.jpg'); }
+  .box.c { --confuso: url('img/images (1).jpg'); }
+  .box.d { --confuso: url('img/images (2).jpg'); }
+  .box.e { --confuso: url('img/linguagem-programacao-jogo.jpg'); }
+  .box.f { --confuso: url('img/images (3).jpg'); }
+  
+  /* Responsivo */
+@media (max-width: 1024px) {
+    .box {
+      flex: 1 1 calc(50% - var(--gap));
+    }
+  }
+  
+@media (max-width: 600px) {
+    .box {
+      flex: 1 1 100%;
+      height: 180px;
+      padding: 20px;
+    }
+  }
 .container3{
     text-align: center;
     margin-top: 70px;
@@ -215,7 +201,13 @@ h3{
     font-size: 40px;
     color: white;
 }
-
+footer{
+    margin-top: 70px;
+    color: white;
+    background-color: black;
+    height: 200px;
+    font-size: 15px;
+}
 
 
 
