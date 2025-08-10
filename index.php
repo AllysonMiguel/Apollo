@@ -6,9 +6,34 @@
 
   if($logado){
     $banner = "Poste sua obra";
+    
   }else{
      $banner = "Acesse já";
   }
+
+  if (isset($_SESSION['login_sucesso']) && $_SESSION['login_sucesso'] === true) {
+    echo "<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            Swal.fire({
+                title: 'Login realizado!',
+                text: 'Bem-vindo, " . $_SESSION['nome'] . "!',
+                icon: 'success',
+                confirmButtonText: 'OK'
+            });
+        });
+    </script>";
+    unset($_SESSION['login_sucesso']); // 🔹 Para não repetir o alerta ao atualizar
+}
+
+
+
+
+
+
+
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +55,7 @@
     if($logado){
       include("includ/nav-bar2.php");
 
-
+      
 
 
     }else{
@@ -46,7 +71,7 @@
     <div class="banner">
    
         <video autoplay muted loop class="video-bg">
-          <source src="vid/114055-700074063_large.mp4"
+          <source src="vid/12137318-hd_1920_1080_25fps.mp4"
           type="video/mp4">
         </video>
     
@@ -154,11 +179,7 @@
           <h4>Participantes</h4>
           <p>Allyson, Gustavo, Lais, Kauã, Aaron.</p>
 
-          <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          </div>
+          
         </div>
       </div>
       <div class="footer-bottom">
@@ -167,6 +188,7 @@
     </footer>
 
     <script src="Script/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>
 

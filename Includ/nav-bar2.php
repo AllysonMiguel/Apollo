@@ -19,13 +19,13 @@
         </div>
 
         <ul class="nav-bar">
-          <li class="links"><a href="#container2">Categorias</a></li>
-          <li class="links"><a href="#container4">Projeto</a></li>
-          <li class="links"><a href="#container8">Sobre nós</a></li>
-          <li class="links"><a href="#"><i class="fa-regular fa-image"></i> Postar</a></li>
-          <li class="links"><a href="#"><i class="fa-light fa-camera"></i></i>Sua Área</a></li>
-          <li class="links"><a href="#">Perfil</a></li>
-          <div class="container-botoes">
+          <li class="links" id ="link1"><a href="#container2">Categorias</a></li>
+          <li class="links" id ="link2"><a href="#container4">Projeto</a></li>
+          <li class="links" id ="link3"><a href="#container8">Sobre nós</a></li>
+          <li class="links" id ="link4"><a href="#"> Postar</a></li>
+          <li class="links" id ="link5"><a href="#">Sua Área</a></li>
+          <li class="links" id ="link6"><a href="perfil.php">Perfil</a></li>
+         
       
           </div>
         </ul>

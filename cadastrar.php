@@ -51,7 +51,7 @@ if (isset($_POST['nome']) && isset($_POST['data']) && isset($_POST['email']) && 
 <body class="cadastro">
 
          <video autoplay muted loop class="video-bg">
-          <source src="vid/114055-700074063_large.mp4"
+          <source src="vid/12137318-hd_1920_1080_25fps.mp4"
           type="video/mp4">
         </video>
     <form action="cadastrar.php" method="POST">

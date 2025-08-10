@@ -16,6 +16,7 @@ html,
 body {
   overflow-x: hidden;
   width: 100%;
+
 }
 
 h1 {
@@ -62,7 +63,6 @@ ul {
   gap: 20px;
   margin-right: 35px;
 }
-
 
 nav {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -405,18 +405,16 @@ a.box {
 }
 
 .container4 {
-  color: rgb(255, 255, 255);
+  color: rgb(11, 22, 114);
 
-  background: rgb(32, 32, 32);
+  background: rgb(255, 183, 50);
 
   margin-top: 50px;
   display: flex;
   flex-direction: row;
-
   height: 350px;
   align-items: center;
   justify-content: center;
-
   box-sizing: border-box;
 }
 
@@ -694,7 +692,7 @@ b {
 }
 
 h6 {
-  margin-right: 170px;
+  padding-right   : 420px;
   margin-top: 10px;
   text-align: center;
   font-size: 30px;
@@ -713,13 +711,17 @@ h6 {
 }
 
 .container8 {
+  margin-bottom: 30px;
+  justify-content: center;
+  align-items: center;
   padding-left: 100px;
   box-sizing: border-box;
   flex-direction: row-reverse;
   display: flex;
-  margin-top: 20px;
-  background-color: #ffffff;
-  height: 330px;
+  box-sizing: border-box;
+  background-color: #ff81ee;
+  height: 350px;
+  color: rgb(19, 56, 11);
 }
 
 .img-cont8 {
@@ -743,7 +745,6 @@ h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
   background-color: #1e1e1e;
   place-items: center;
 }
@@ -1071,7 +1072,7 @@ a:hover {
 }
 .cadastro p {
   margin-top: 10px;
-  
+
   margin-left: 60px;
   width: 400px;
   font-size: 35px;
@@ -1170,7 +1171,8 @@ html {
 .container16 {
   margin-top: 25px;
   flex-wrap: wrap;
-
+  padding-left: 50px; /*Pode dar merda na responsividade  */
+  padding-right: 50px;/*Pode dar merda na responsividade  */
   gap: 17px;
   justify-content: center;
   align-items: center;
@@ -1235,22 +1237,38 @@ html {
 }
 
 .login video {
-  width: 100%;
-  height: 100%;
-  margin-top: 0;
+   position: fixed; 
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: -1;
+    background: black; 
+ 
 }
 
 .cadastro .video-bg {
-
-  height: 100%;
-  margin-top: 0;
+  position: fixed; 
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: -1;
+    background: black; 
 }
 
-a.botao-home{
- 
+a.botao-home {
   margin-left: 20px;
   text-decoration: none;
-  color: #000 ;
+  color: #000;
   font-size: 30px;
   position: absolute;
   top: 10px;
@@ -1258,36 +1276,40 @@ a.botao-home{
   transition: 0.2s;
 }
 
-a.botao-home:hover{
-   color: #ca3434; 
-
-
+a.botao-home:hover {
+  color: #ca3434;
 }
 
-
-
-
-
-a.botao-home-cadastro{
+a.botao-home-cadastro {
   margin-left: 20px;
   text-decoration: none;
-  color: #000 ;
+  color: #000;
   font-size: 30px;
   position: absolute;
   top: 10px;
   left: 10px;
-  
-
 }
 
-a.botao-home-cadastro:hover{
-   color: #ca3434; 
-
-
+a.botao-home-cadastro:hover {
+  color: #ca3434;
 }
 
 .fa-image:before {
-    font-size: 20px;
- 
+  font-size: 20px;
 }
+/*
+link1 a{
+  color: #f7f31b  ;
+}
+#link2 a{
+  color: #113dce  ;
+}
+#link3 a{
+  color: #d80902  ;
+}
+#link4 a{
+  color: #d80202  ;
+}
+/*    
+
 
